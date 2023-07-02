@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DatabaseSettingsState">
+    <option name="database" value="Iisaefi" />
+    <option name="driverClass" value="org.example.model.UserModel" />
+    <option name="driverPath" value="C:\Users\AHMED SALEM\Downloads\Compressed\sqljdbc_12.2.0.0_fra\sqljdbc_12.2\fra\mssql-jdbc-12.2.0.jre11.jar" />
+    <option name="port" value="1434" />
+    <option name="url" value="localhost:1434/Iisaefi" />
+    <option name="username" value="kholio" />
+  </component>
+</project>
