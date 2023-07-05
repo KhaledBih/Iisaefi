@@ -1,3 +1,39 @@
+
+package org.example.service;
+
+import org.example.dao.UserDao;
+import org.example.model.UserModel;
+
+import javax.ejb.EJB;
+
+public class UserService {
+    @EJB
+    private UserDao userDAO= new UserDao();
+
+    // Create a new user
+    public void createUser(UserModel user) {
+        userDAO.createUser(user);
+    }
+
+    // Get a user by their ID
+    public UserModel getUserById(String id) {
+        return userDAO.getUserById(id);
+    }
+
+    // Update a user
+    public void updateUser(UserModel user) {
+        userDAO.updateUser(user);
+    }
+
+    // Delete a user by their ID
+    public void deleteUser(String id) {
+        userDAO.deleteUser(id);
+    }
+}
+
+
+
+
 //package org.example.service;
 
 /*

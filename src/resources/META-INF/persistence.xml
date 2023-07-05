@@ -5,8 +5,9 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
                                  http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
     <persistence-unit name="MyPersistenceUnit" transaction-type="RESOURCE_LOCAL">
-        <class>org.example.model.UserModel</class>
         <class>org.example.model.MedicalRecord</class>
+        <class>org.example.model.UserModel</class>
+
         <class>org.example.model.Attendance</class>
         <class>org.example.model.Address</class>
         <class>org.example.model.EmergencyCall</class>
@@ -15,12 +16,17 @@
         <class>org.example.model.SubCategory</class>
         <!-- Autres entités si nécessaire -->
 
+
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:1434/Iisaefi"/>
-            <property name="javax.persistence.jdbc.user" value="kholio"/>
-            <property name="javax.persistence.jdbc.password" value="1234567"/>
-            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <!-- Modify the JDBC URL, username, and password for your MySQL database -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Saleh_welate"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="Kholio@4646"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <!-- D'autres propriétés de configuration si nécessaire -->
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+
         </properties>
     </persistence-unit>
 </persistence>

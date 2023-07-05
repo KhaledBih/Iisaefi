@@ -11,6 +11,48 @@ import com.google.gson.reflect.TypeToken;
 import lombok.Data;
 
 @Entity
+@Table(name = "medical_record")
+@Data
+public class MedicalRecord {
+    @Id
+    private String id;
+
+    @Column(name = "patient_name")
+    private String patientName;
+
+    @Temporal(TemporalType.DATE)
+    @Column(name = "date_of_birth")
+    private Date dateOfBirth;
+
+    @Column(name = "blood_type")
+    private String bloodType;
+/*
+    @OneToMany(mappedBy = "medicalRecord", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<MedicalRecordAllergy> allergies;
+
+    @OneToMany(mappedBy = "medicalRecord", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<MedicalRecordCondition> conditions;
+
+    @OneToMany(mappedBy = "medicalRecord", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<MedicalRecordMedication> medications;
+*/
+    // ...
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+@Entity
 @Table(name = "medical_record") // Spécifiez le nom de la table dans la base de données
 @Data
 public class MedicalRecord {
@@ -28,17 +70,17 @@ public class MedicalRecord {
     private String bloodType;
 
     @ElementCollection // Indiquez qu'il s'agit d'une collection d'éléments (allergies)
-    @CollectionTable(name = "medical_record_allergies", joinColumns = @JoinColumn(name = "medical_record_id")) // Spécifiez la table qui contiendra les allergies
+
     @Column(name = "allergy") // Spécifiez le nom de la colonne qui contiendra les valeurs d'allergies
     private List<String> allergies;
 
     @ElementCollection // Indiquez qu'il s'agit d'une collection d'éléments (médications)
-    @CollectionTable(name = "medical_record_medications", joinColumns = @JoinColumn(name = "medical_record_id")) // Spécifiez la table qui contiendra les médications
+
     @Column(name = "medication") // Spécifiez le nom de la colonne qui contiendra les valeurs de médications
     private List<String> medications;
 
     @ElementCollection // Indiquez qu'il s'agit d'une collection d'éléments (conditions)
-    @CollectionTable(name = "medical_record_conditions", joinColumns = @JoinColumn(name = "medical_record_id")) // Spécifiez la table qui contiendra les conditions
+
     @Column(name = "condition") // Spécifiez le nom de la colonne qui contiendra les valeurs de conditions
     private List<String> conditions;
     public MedicalRecord(String id, String patientName, Date dateOfBirth, String bloodType, List<String> allergies, List<String> medications, List<String> conditions) {
@@ -127,4 +169,5 @@ public class MedicalRecord {
         this.conditions = conditions;
     }
 }
+*/
 
